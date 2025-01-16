@@ -1,0 +1,1859 @@
+<html><!--
+Template : Template1 
+Name: template1.jsp
+ --><head>
+<meta charset="UTF-8">
+<meta name="description" content="Know Your School">
+<meta name="keywords" content="Know your School, school report card">
+<meta name="author" content="Know your School, School report card">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+
+
+<title>Know Your School</title>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/images/favicon-16x16.png">
+<link rel="manifest" href="/resources/images/site.webmanifest">
+
+
+
+
+<link href="/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/resources/css/bootstrap-4.3.1.min.css" rel="stylesheet" type="text/css">
+
+<link href="/resources/css/responsive30.css" rel="stylesheet" type="text/css">
+
+<link href="/resources/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+<link href="/resources/css/select2.min.css" rel="stylesheet" type="text/css">
+<link href="/resources/css/line-awesome-font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<link href="/resources/css/toastr.css" rel="stylesheet" type="text/css">
+	<link href="/resources/css/toastr.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	    <div class="span">
+		
+			
+
+
+
+<script type="text/javascript" src="/resources/js/jquery-3.4.1.min.js"></script>
+
+
+
+
+
+  
+
+
+<div class="container-fluid">
+	<div class="row p-1">
+		<div class="col-md-6">
+			<a href="/home">
+			<img src="/resources/images/emblem.png" class="src-imgL" alt="know your school"></a>
+		</div>
+		<div class="col-md-6 ">
+		
+			<img src="/resources/images/srclogo.jpg" class="src-imgR mt-3" usemap="#Map" alt="know your school">
+				
+		        <map name="Map">
+		          <area shape="rect" coords="-7,6,115,33" href="http://udiseplus.gov.in/" target="_blank">
+		          <area shape="rect" coords="154,4,511,46" href="http://src.udiseplus.gov.in/" target="_blank">
+        		</map>
+				<a href="https://www.g20.org/en/" target="_blank">
+        		<img src="/resources/images/g20-logo.png" class=" border-right mt-3 pr-3 mr-3 float-right" alt="g20" width="110px"></a>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-blue1 mt-3">
+	<div class="container-fluid">
+	
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item  ">
+					<a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item   ">
+					<a class="nav-link" href="/locateSchool/schoolSearch">Locate
+						School</a>
+				</li>
+
+
+				<li class="nav-item   ">
+					<a class="nav-link" href="/School/DataDashboard">Region Profile</a>
+				</li>
+				
+
+				
+		      <li class="nav-item   ">
+					<a class="nav-link" href="/newSearchSchool/searchSchool">School Search</a>
+				</li>  
+		  	
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</nav>
+
+
+		
+			
+
+
+<script>
+	var contextRoot = "";
+</script>
+
+<div id="page-container">
+	<div id="content-wrap">
+		<div class="container">
+			
+				
+					<div class="row">
+						<div class="col-md-12">
+							<div class="mt-3 ml-2">
+								<div class="row">
+									<div class="col-md-8"></div>
+									<div class="col-md-4 ">
+										<span class="float-right">
+
+											<button onclick="trackYourSchool(4009999)" class="btn btn-primary btn-sm mt-1 text-white">
+												Track Your School</button>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="card mt-2 mb-5">
+								<div class="card-header">
+									<div class="clearfix">
+										<div class="float-left">
+											<a class="card-title">
+												<h5>School Profile</h5>
+											</a>
+										</div>
+										<div class="float-right">
+											<form action="/globalSearch/byUdiseCode" method="post" style="margin-bottom: 0;">
+												<input type="hidden" name="Back" value="Back"> <input type="hidden" name="searchBy" value="23390104103">
+												<input type="hidden" name="searchType" value="2">
+												<input type="hidden" name="stateCode" value="">
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="card-block p-3">
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">School Name :</b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">MS MOHANIYA</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">UDISE CODE : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">23390104103</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15"> State : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">MADHYA PRADESH</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">District : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">JABALPUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Block :</b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">JABALPUR (RURAL)</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Cluster :</b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">GOVT. HSS SALIWADA
+													</span> <span class="pFont14"> </span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+									
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15"> Ward :</b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">MOHNIYA (MANEGAON CANTT.)</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">PinCode : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">482005</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">School Category: </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">4-Upper Primary only</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">School Type: </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">3-Co-educational</span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Class From :</b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">6</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Class To : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">8</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">State Management : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">1-Department of Education</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">National Management : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">1-Department of Education</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Status : </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="row">
+												<div class="col-5">
+													<b class="font-15">Location: </b>
+												</div>
+												<div class="col-7">
+													<span class="pFont14">2-Urban</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr>
+								</div>
+								<div class="container">
+									<div class="row bg-silver">
+										<div class="col-md-6">
+											<p style="margin-top:12px;">
+												<strong style="color: #000000 !important;">Note : </strong>
+												Data shown below based on UDISE+ Data of Academic Year
+												
+												
+												
+												
+											
+											2022-23.
+											
+											</p>
+										</div>
+
+										<div class="col-md-6">
+											<ul class="ulInlineFlex mb-2">
+											    <li class="mr-3"><h5 style="margin-top:5px;"> Report Card</h5>  </li>
+											    		
+													<li>
+														<button type="submit" value="Report Card 2022-23" class="btn btn-primary btn-sm  me-2 text-white searchSchoolBtnclass" name="Search" onclick="ReportCardOpenModel(4009999,9)">
+															2022-23</button>
+													</li>
+												
+												
+													<li>
+														<button type="submit" value="Report Card 2021-22" class="btn btn-primary btn-sm  me-2 text-white searchSchoolBtnclass" name="Search" onclick="ReportCardOpenModel(4009999,8)">
+															2021-22</button>
+													</li>
+												
+												
+													<li>
+														<button type="submit" value="Report Card 2020-21" class="btn btn-primary btn-sm  me-2 text-white searchSchoolBtnclass" name="Search" onclick="ReportCardOpenModel(4009999,7)">
+															 2020-21</button>
+													</li>
+												
+												
+													<li>
+														<button type="submit" value="Report Card 2019-20" class="btn btn-primary btn-sm  me-2 text-white searchSchoolBtnclass" name="Search" onclick="ReportCardOpenModel(4009999,6)">
+															 2019-20</button>
+													</li>
+												
+												
+													<li>
+														<button type="submit" value="Report Card 2018-19" class="btn btn-primary btn-sm  me-2 text-white searchSchoolBtnclass" name="Search" onclick="ReportCardOpenModel(4009999,5)">
+															 2018-19</button>
+													</li>
+												
+											</ul>
+
+										</div>
+									</div>
+								</div>
+								<hr>
+								
+									<div id="accordion" class="accordion px-2">
+										<div class="card mb-2">
+											<div class="card-header collapsed" data-toggle="collapse" href="#collapseOne201819" style="cursor: pointer;">
+												<a class="card-title ml-2"> Basic Details : </a>
+											</div>
+											<div id="collapseOne201819" class="card-body collapse" data-parent="#accordion">
+												<div class="card m-2">
+													<div class="card-block p-3">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">School Name :</b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">GOVT MIDDLE SCHOOL  MOHANIYA</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">UDISE CODE : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">23390104103</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15"> State : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">Madhya Pradesh</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">District : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">JABALPUR</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Block :</b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">JABALPUR (RURAL)</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Cluster :</b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">GOVT. HSS SALIWADA
+																		</span> <span class="pFont14"> </span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15"> Village :</b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">MOHNIYA (MANEGAON CANTT.)</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">PinCode : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">482005</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">School Category: </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">4 - Upper Primary only</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">School Type: </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">3-Co-educational</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Class From :</b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">6</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Class To : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">8</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">State Management : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">1-Department of Education</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">National Management : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">1-Department of Education</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Status : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">0-Operational</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Location: </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">2-Urban</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Aff Board Sec. : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14"></span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15"> Aff Board H.Sec. : </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14"></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Year of Establishment: </b>
+																	</div>
+																	<div class="col-7">
+																		<span class="pFont14">2006</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-6">
+																<div class="row">
+																	<div class="col-5">
+																		<b class="font-15">Pre-Primary: </b>
+																	</div>
+																	<div class="col-7">
+																		
+																			
+																			
+																			
+																				<div class="col-7 px-0">
+																					<span class="pFont14"> </span>
+																				</div>
+																			
+																		
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="card mb-2">
+											<div class="card-header collapsed" data-toggle="collapse" href="#collapseOne" style="cursor: pointer;">
+												<a class="card-title ml-2"> Facilities : </a>
+											</div>
+											<div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+												<div class="card m-2">
+													<div class="card-block p-3">
+														<div class="row">
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-4">
+																		<b class="font-15">Building Status :</b>
+																	</div>
+
+																	<div class="col-8">
+																		<span class="pFont14">3-Government</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Boundary Wall: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">5-No boundary walls</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">No. of Boys Toilets: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">1</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">No. of Girls Toilets: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">1</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">No. of CWSN Toilets: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">2</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Drinking Water Availability:</b>
+																	</div>
+																	
+																		<div class="col-5">
+																			<span class="pFont14">Yes</span>
+																		</div>
+																	
+																	
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Hand Wash Facility:</b>
+																	</div>
+																	
+																		<div class="col-5">
+																			<span class="pFont14">Yes</span>
+																		</div>
+																	
+																	
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Generator:</b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Library:</b>
+																	</div>
+																	
+																		
+																			<div class="col-5">
+																				<span class="pFont14">1-Yes</span>
+																			</div>
+																		
+																		
+																	
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Reading Corner: </b>
+																	</div>
+
+																	
+																		<div class="col-5">
+																			<span class="pFont14">1-Yes</span>
+																		</div>
+																	
+																	
+																	<span class="pFont14"></span>
+
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Book Bank: </b>
+																	</div>
+
+																	
+																	
+																		<div class="col-5">
+																			<span class="pFont14">2-No</span>
+																		</div>
+																	
+																	<span class="pFont14"></span>
+
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Laptop:</b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Desktop :</b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Tablet: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Scanner:</b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Printer: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional Web Cam : </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+																
+																	
+																
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Functional DigiBoard: </b>
+																	</div>
+																	<div class="col-5">
+																		<span class="pFont14">0</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<div class="row">
+																	<div class="col-7">
+																		<b class="font-15">Internet:</b>
+																	</div>
+
+																	
+																	
+																		<div class="col-5">
+																			<span class="pFont14">2-No</span>
+																		</div>
+																	
+																</div>
+															</div>
+															<div class="col-md-4">
+															
+																
+															</div>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-header collapsed " data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="cursor: pointer;">
+											<a class="card-title ml-2"> Room Details: </a>
+										</div>
+										<div id="collapseTwo" class="card-body collapse mb-2" data-parent="#accordion">
+											<div class="card m-2">
+												<div class="card-block p-3">
+													<div class="row">
+														<div class="col-md-6">
+															<div class="row">
+																<div class="col-5">
+																	<b class="font-15">Class Rooms: </b>
+																</div>
+																<div class="col-7">
+																	<span class="pFont14">3</span>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="row">
+																<div class="col-5">
+																	<b class="font-15">Other Rooms: </b>
+																</div>
+																<div class="col-7">
+																	<span class="pFont14">1</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-header collapsed my-2" data-toggle="collapse" data-parent="#accordion" href="#collapsethree">
+											<a class="card-title ml-2" style="cursor: pointer;">
+												Enrolment of The Students: </a>
+										</div>
+										<div id="collapsethree" class="card-body collapse mb-1" data-parent="#accordion">
+											<div class="card m-2">
+												<div class="card-block p-3 table-responsive">
+
+													<table class="table">
+														<tbody><tr class="tback">
+															<th class="font-600 card-title ml-2" width="12%">Class</th>
+															<td class="fw-600" width="8%">Pre-Primary</td>
+															<td class="fw-600 " width="4%">I</td>
+															<td class="fw-600" width="4%">II</td>
+															<td class="fw-600" width="4%">III</td>
+															<td class="fw-600" width="4%">IV</td>
+															<td class="fw-600" width="4%">V</td>
+															<td class="fw-600" width="4%">VI</td>
+															<td class="fw-600" width="4%">VII</td>
+															<td class="fw-600" width="4%">VIII</td>
+															<td class="fw-600" width="4%">IX</td>
+															<td class="fw-600" width="4%">X</td>
+															<td class="fw-600" width="4%">XI</td>
+															<td class="fw-600" width="4%">XII</td>
+															<td class="font-600" width="8%">Class(1-12)</td>
+															<td class="font-600" width="15%">Class(1-12) With
+																Pre-Primary</td>
+
+														</tr>
+														<tr>
+															<th class="font-600">No. of Students</th>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">9</span></td>
+															<td><span class="pFont14">16</span></td>
+															<td><span class="pFont14">11</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td><span class="pFont14">0</span></td>
+															<td class="font-600"><span>36</span></td>
+															<td class="font-600"><span>36</span></td>
+														</tr>
+													</tbody></table>
+													<table class="table mt-3">
+														<tbody><tr>
+															<td class="font-600">Total Teachers</td>
+															<td class="font-600" width="100px"><span>2</span>
+															</td>
+														</tr>
+													</tbody></table>
+												</div>
+											</div>
+										</div>
+								
+							</div>
+						</div>
+					</div>
+		</div>
+		
+		
+		
+	</div>
+
+</div>
+
+<div class="container">
+
+	<!-- Trigger the modal with a button -->
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalReport" id="openpdfReportCardmodelId" style="visibility: hidden">Open Modal</button>
+	<!-- Modal -->
+	<div id="myModalReport" class="modal fade" role="dialog" data-backdrop="static">
+		<div class="modal-dialog modal-lg1">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header btn-info">
+					<h4 class="modal-title">SCHOOL REPORT CARD</h4>
+					<button type="button" class="close" data-dismiss="modal">×</button>
+				</div>
+				<div class="modal-body" id="pdfData"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- track your School Model -->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#schoolTrackModalLong" id="schoolTrackId" style="display: none;"></button>
+
+<!-- Modal -->
+<div class="modal fade" id="schoolTrackModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">School Data
+					Year Wise</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item" role="presentation"><a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">TimeLine View</a></li>
+
+					<li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">List
+							View</a></li>
+
+				</ul>
+				<hr>
+				<div class="tab-content" id="pills-tabContent">
+
+					<div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+						<section class="timeline">
+							<ul id="timeLineUL">
+
+
+							</ul>
+						</section>
+
+
+					</div>
+
+					<!-- tab second  start-->
+
+					<div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div class="row">
+							<div class=" col-md-12 table-responsive">
+								<table class="table table-bordered">
+									<thead class="contact-address text-white">
+										<tr>
+											<th width="2%">S. No.</th>
+											<th width="7%">Academic Year</th>
+											<th width="3%">UDISE CODE</th>
+											<th style="width: 13% ! important;">School Name</th>
+											<th width="10%">Region Details</th>
+											<th width="15%">Basic Details</th>
+											<th width="3%">Status</th>
+										</tr>
+									</thead>
+									
+									<tbody id="SchTrackTable">
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- tab second End -->
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+ul.ulInlineFlex {
+    display: inline-flex;
+    list-style: none;
+} 
+
+ul.ulInlineFlex li {
+    margin-right: 6px;
+    margin-top: 7px;
+}
+.col-321 {
+	max-width: 21% ! important;
+}
+
+.bg-silver {
+	background-color:#e5e5e5 !important;
+}
+
+h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0rem ! important;
+}
+
+.card-header {
+	padding: .5rem 1.25rem;
+}
+
+.accordion .card-header:before {
+	font-family: 'FontAwesome';
+	content: "\f078";
+	float: left;
+	color: white;
+}
+
+.accordion .card-header.collapsed:before {
+	/* symbol for "collapsed" panels */
+	content: "\f054";
+	color: white;
+}
+
+.card-title {
+	margin-bottom: .75rem;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.btn-info {
+	color: #fff;
+	background-color: #503103;
+	border-color: #503103;
+	box-shadow: 0px 5px 12px rgba(78, 75, 71, 0.5);
+}
+
+.card-title {
+	color: #ffffff ! important;
+}
+
+table.table thead tr th {
+	border-bottom: 1px solid red;
+}
+
+table.table {
+	border: 1px solid silver;
+}
+
+table.table tbody tr td, table.table thead tr th, table.table thead {
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+
+.font-600 {
+	font-weight: 600;
+	color: #4c4c4c;
+}
+
+.table td, .table th {
+	padding: .5em .5em;
+}
+
+/* Track School CSS */
+p {
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
+.timeline ul {
+	padding: 15px 0;
+}
+
+.timeline ul li {
+	list-style-type: none;
+	position: relative;
+	width: 6px;
+	margin: 0 auto;
+	padding-top: 15px;
+	background: #198dcb;
+}
+
+.timeline ul li::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: inherit;
+}
+
+.timeline ul li div {
+	position: relative;
+	bottom: 0;
+	width: 490px;
+	padding: 15px;
+	background: #198dcb;
+}
+
+.timeline ul li:nth-child(even) div {
+	left: -530px;
+}
+
+.timeline ul li div::before {
+	content: '';
+	position: absolute;
+	bottom: 7px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+	left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+	left: -15px;
+	border-width: 8px 16px 8px 0;
+	border-color: transparent #198dcb transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div::before {
+	right: -15px;
+	border-width: 8px 0 8px 16px;
+	border-color: transparent transparent transparent #198dcb;
+}
+
+time {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.timeline ul li::after {
+	transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+	background: #198dcb;
+}
+
+.timeline ul li div {
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+	transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+	transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+	transform: none;
+	visibility: visible;
+	opacity: 1;
+}
+
+.card {
+	box-shadow: none !  important;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1600px) {
+	.timeline ul li div {
+		position: relative;
+		bottom: 0;
+		width: 500px ! important;
+	}
+	.timeline ul li:nth-child(even) div {
+		left: -540px !important;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+	.timeline ul li div {
+		position: relative;
+		bottom: 0;
+		width: 340px ! important;
+	}
+	.timeline ul li:nth-child(even) div {
+		left: -380px !important;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.timeline ul li div {
+		width: 290px;
+	}
+	.timeline ul li:nth-child(even) div {
+		left: -319px;
+		/*250+45-6*/
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+ul.ulInlineFlex {
+    display: grid;
+    list-style: none;
+    padding: 0px;
+} 
+
+ul.ulInlineFlex li {
+    margin-right: 6px;
+    margin-top: 7px;
+}
+	.timeline ul li.in-view::after {
+		display: none;
+	}
+	.timeline ul li {
+		margin-left: 0px;
+		width: 100%;
+		margin-bottom: 15px;
+		padding-top: 0px;
+	}
+	.timeline ul li div {
+		width: calc(100vw - 91px);
+	}
+	.timeline ul li:nth-child(even) div {
+		left: 0px;
+		width: 100%;
+	}
+	.timeline ul li:nth-child(odd) div {
+		left: 0px;
+		width: 100%;
+	}
+	.timeline ul li:nth-child(even) div {
+		left: 0px;
+	}
+	.timeline ul li:nth-child(even) div::before {
+		left: -15px;
+		border-width: 8px 16px 8px 0;
+		border-color: transparent #14B2B5 transparent transparent;
+	}
+}
+</style>
+
+<script>
+
+function ReportCardOpenModel(SchoolId,yearId){
+	
+	var schoolId  =  SchoolId ;
+	var yearId = yearId;
+	$.ajax({
+		
+			url :contextRoot + '/NewReportCard/PdfReportSchId',
+			method :'POST',
+			data:{schoolId : schoolId,yearId : yearId},
+			success: function(data){
+
+				$("#ReportCardpdfopenModelURlEmbed").attr('src','data:application/pdf;base64,'+ data)
+
+				$("#pdfData").html("").append('<embed src="" id="ReportCardpdfopenModelURlEmbed" frameborder="0" width="100%" height="550px">');
+				
+				$(document).find("#ReportCardpdfopenModelURlEmbed").attr('src','data:application/pdf;base64,'+ data);
+
+				document.getElementById("openpdfReportCardmodelId").click();
+				
+				}
+
+		
+		})
+}
+
+</script>
+
+
+<script>
+
+function oldReportCardOpenModel(udiseCode){
+	
+	var data  =  udiseCode ;
+	$.ajax({
+		
+			url :contextRoot +'/ReportCard/PdfReport',
+			method :'POST',
+			data:{
+				"udiseCode" : data
+				},
+			success: function(data){
+
+				$("#ReportCardpdfopenModelURlEmbed").attr('src','data:application/pdf;base64,'+ data)
+
+				$("#pdfData").html("").append('<embed src="" id="ReportCardpdfopenModelURlEmbed" frameborder="0" width="100%" height="550px">');
+				
+				$(document).find("#ReportCardpdfopenModelURlEmbed").attr('src','data:application/pdf;base64,'+ data);
+
+				document.getElementById("openpdfReportCardmodelId").click();
+				
+				}
+
+		
+		})
+}
+
+</script>
+
+
+
+<script>
+
+function trackYourSchool(schoolId) {
+	var data = schoolId;
+	$.ajax({
+            url : contextRoot+ '/searchSchool/trackSchool',
+            method : 'POST',
+			data : {
+			"schoolId" : data
+					},
+			success : function(data) {
+					var i = 1;
+					$('#timeLineUL').html("");
+					$('#SchTrackTable').html("");
+					data.forEach( function(item){
+						
+						if(item.yearId==9){
+							var tabl = '<tr><td>'+i+'</td><td>2022-23</td><td>'+validateMessage(item.udiseSchCode)+'</td><td>'+validateMessage(item.schoolName)+'</td><td><b>State </b> : '+validateMessage(item.stateName)+'<br><b>District </b> : '+validateMessage(item.districtName)+'<br><b>Block </b> : '+validateMessage(item.blockName)+'</td><td><b>State Mgmt </b> : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'<br><b>School Category </b> : '+item.schCategoryId+'-'+item.schCatDesc+'<br><b>School Type </b> : '+item.schType+'-'+item.schTypeDesc+'</td>'
+							var timeLineLi = '<li class="animate__animated animate__fadeInLeft animate__delay-0.5s in-view"><div class="text-white"><time>Academic Year 2022-23</time><p class="text-white">UDISE Code : '+validateMessage(item.udiseSchCode)+'</p><p class="text-white">School : '+validateMessage(item.schoolName)+'</p><p class="text-white">State : '+validateMessage(item.stateName)+'  , District : '+validateMessage(item.districtName)+' ,Block : '+validateMessage(item.blockName)+'</p><p class="text-white">School Management : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'</p><p class="text-white">School Category : ' +item.schCategoryId+'-'+item.schCatDesc+'</p><p class="text-white">School Type : '+item.schType+'-'+item.schTypeDesc+'</p>'
+					if(item.schoolStatus==0){
+							var status = '<td class = "bg-success text-light">0-Operational</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-success text-light"> School status : 0-Operational</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+								}
+					if(item.schoolStatus==1){
+							var status = '<td class ="bg-warning">1-Closed</td></tr>'
+							var res =tabl.concat(status)
+						    $('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-warning"> School status : 1-Closed</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+									}
+					if(item.schoolStatus==2){
+							var status = '<td>2-Merged</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 2-Merged</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+							}
+					if(item.schoolStatus==3){
+						   var status = '<td>3-Sanctioned but not Operational</td></tr>'
+						   var res =tabl.concat(status)
+						   $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : 3-Sanctioned but not Operational</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+						  
+								}
+					if(item.schoolStatus==4){
+							var status = '<td>4-DCF not Recieved</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 4-DCF not Recieved</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+								}
+					if(item.schoolStatus==5){
+						  var status = '<td class ="bg-danger text-light">5-Permanently Closed</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white bg-danger text-light"> School status : 5-Permanently Closed</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+													
+								}
+					if(item.schoolStatus==6){
+						  var status = '<td>WRONG CODE</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : WRONG CODE</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+								}
+									i++;
+						}
+
+						if(item.yearId==8){
+							var tabl = '<tr><td>'+i+'</td><td>2021-22</td><td>'+validateMessage(item.udiseSchCode)+'</td><td>'+validateMessage(item.schoolName)+'</td><td><b>State </b> : '+validateMessage(item.stateName)+'<br><b>District </b> : '+validateMessage(item.districtName)+'<br><b>Block </b> : '+validateMessage(item.blockName)+'</td><td><b>State Mgmt </b> : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'<br><b>School Category </b> : '+item.schCategoryId+'-'+item.schCatDesc+'<br><b>School Type </b> : '+item.schType+'-'+item.schTypeDesc+'</td>'
+							var timeLineLi = '<li class="animate__animated animate__fadeInLeft animate__delay-0.5s in-view"><div class="text-white"><time>Academic Year 2021-22</time><p class="text-white">UDISE Code : '+validateMessage(item.udiseSchCode)+'</p><p class="text-white">School : '+validateMessage(item.schoolName)+'</p><p class="text-white">State : '+validateMessage(item.stateName)+'  , District : '+validateMessage(item.districtName)+' ,Block : '+validateMessage(item.blockName)+'</p><p class="text-white">School Management : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'</p><p class="text-white">School Category : ' +item.schCategoryId+'-'+item.schCatDesc+'</p><p class="text-white">School Type : '+item.schType+'-'+item.schTypeDesc+'</p>'
+					if(item.schoolStatus==0){
+							var status = '<td class = "bg-success text-light">0-Operational</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-success text-light"> School status : 0-Operational</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+								}
+					if(item.schoolStatus==1){
+							var status = '<td class ="bg-warning">1-Closed</td></tr>'
+							var res =tabl.concat(status)
+						    $('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-warning"> School status : 1-Closed</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+									}
+					if(item.schoolStatus==2){
+							var status = '<td>2-Merged</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 2-Merged</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+							}
+					if(item.schoolStatus==3){
+						   var status = '<td>3-Sanctioned but not Operational</td></tr>'
+						   var res =tabl.concat(status)
+						   $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : 3-Sanctioned but not Operational</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+						  
+								}
+					if(item.schoolStatus==4){
+							var status = '<td>4-DCF not Recieved</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 4-DCF not Recieved</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+								}
+					if(item.schoolStatus==5){
+						  var status = '<td class ="bg-danger text-light">5-Permanently Closed</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white bg-danger text-light"> School status : 5-Permanently Closed</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+													
+								}
+					if(item.schoolStatus==6){
+						  var status = '<td>WRONG CODE</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : WRONG CODE</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+								}
+									i++;
+						}
+
+						if(item.yearId==7){
+							var tabl = '<tr><td>'+i+'</td><td>2020-21</td><td>'+validateMessage(item.udiseSchCode)+'</td><td>'+validateMessage(item.schoolName)+'</td><td><b>State </b> : '+validateMessage(item.stateName)+'<br><b>District </b> : '+validateMessage(item.districtName)+'<br><b>Block </b> : '+validateMessage(item.blockName)+'</td><td><b>State Mgmt </b> : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'<br><b>School Category </b> : '+item.schCategoryId+'-'+item.schCatDesc+'<br><b>School Type </b> : '+item.schType+'-'+item.schTypeDesc+'</td>'
+							var timeLineLi = '<li class="animate__animated animate__fadeInLeft animate__delay-0.5s in-view"><div class="text-white"><time>Academic Year 2020-21</time><p class="text-white">UDISE Code : '+validateMessage(item.udiseSchCode)+'</p><p class="text-white">School : '+validateMessage(item.schoolName)+'</p><p class="text-white">State : '+validateMessage(item.stateName)+'  , District : '+validateMessage(item.districtName)+' ,Block : '+validateMessage(item.blockName)+'</p><p class="text-white">School Management : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'</p><p class="text-white">School Category : ' +item.schCategoryId+'-'+item.schCatDesc+'</p><p class="text-white">School Type : '+item.schType+'-'+item.schTypeDesc+'</p>'
+					if(item.schoolStatus==0){
+							var status = '<td class = "bg-success text-light">0-Operational</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-success text-light"> School status : 0-Operational</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+								}
+					if(item.schoolStatus==1){
+							var status = '<td class ="bg-warning">1-Closed</td></tr>'
+							var res =tabl.concat(status)
+						    $('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white bg-warning"> School status : 1-Closed</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+															
+									}
+					if(item.schoolStatus==2){
+							var status = '<td>2-Merged</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 2-Merged</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+							}
+					if(item.schoolStatus==3){
+						   var status = '<td>3-Sanctioned but not Operational</td></tr>'
+						   var res =tabl.concat(status)
+						   $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : 3-Sanctioned but not Operational</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+						  
+								}
+					if(item.schoolStatus==4){
+							var status = '<td>4-DCF not Recieved</td></tr>'
+							var res =tabl.concat(status)
+							$('#SchTrackTable').append(res);
+							let timeLineStatus = '<p class="text-white">School status : 4-DCF not Recieved</p></div></li>';
+							let timlineRes = timeLineLi.concat(timeLineStatus);
+							$('#timeLineUL').append(timlineRes);
+							
+								}
+					if(item.schoolStatus==5){
+						  var status = '<td class ="bg-danger text-light">5-Permanently Closed</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white bg-danger text-light"> School status : 5-Permanently Closed</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+													
+								}
+					if(item.schoolStatus==6){
+						  var status = '<td>WRONG CODE</td></tr>'
+						  var res =tabl.concat(status)
+						  $('#SchTrackTable').append(res);
+						  let timeLineStatus = '<p class="text-white">School status : WRONG CODE</p></div></li>';
+						  let timlineRes = timeLineLi.concat(timeLineStatus);
+						  $('#timeLineUL').append(timlineRes);
+								}
+									i++;
+						}
+					if(item.yearId==6){
+					var tabl = '<tr><td>'+i+'</td><td>2019-20</td><td>'+validateMessage(item.udiseSchCode)+'</td><td>'+validateMessage(item.schoolName)+'</td><td><b>State </b> : '+validateMessage(item.stateName)+'<br><b>District </b> : '+validateMessage(item.districtName)+'<br><b>Block </b> : '+validateMessage(item.blockName)+'</td><td><b>State Mgmt </b> : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'<br><b>School Category </b> : '+item.schCategoryId+'-'+item.schCatDesc+'<br><b>School Type </b> : '+item.schType+'-'+item.schTypeDesc+'</td>'
+					var timeLineLi = '<li class="animate__animated animate__fadeInLeft animate__delay-0.5s in-view"><div class="text-white"><time>Academic Year 2019-20</time><p class="text-white">UDISE Code : '+validateMessage(item.udiseSchCode)+'</p><p class="text-white">School : '+validateMessage(item.schoolName)+'</p><p class="text-white">State : '+validateMessage(item.stateName)+'  , District : '+validateMessage(item.districtName)+' ,Block : '+validateMessage(item.blockName)+'</p><p class="text-white">School Management : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'</p><p class="text-white">School Category : ' +item.schCategoryId+'-'+item.schCatDesc+'</p><p class="text-white">School Type : '+item.schType+'-'+item.schTypeDesc+'</p>'
+			if(item.schoolStatus==0){
+					var status = '<td class = "bg-success text-light">0-Operational</td></tr>'
+					var res =tabl.concat(status)
+					$('#SchTrackTable').append(res);
+					let timeLineStatus = '<p class="text-white bg-success text-light"> School status : 0-Operational</p></div></li>';
+					let timlineRes = timeLineLi.concat(timeLineStatus);
+					$('#timeLineUL').append(timlineRes);
+													
+						}
+			if(item.schoolStatus==1){
+					var status = '<td class ="bg-warning">1-Closed</td></tr>'
+					var res =tabl.concat(status)
+				    $('#SchTrackTable').append(res);
+					let timeLineStatus = '<p class="text-white bg-warning"> School status : 1-Closed</p></div></li>';
+					let timlineRes = timeLineLi.concat(timeLineStatus);
+					$('#timeLineUL').append(timlineRes);
+													
+							}
+			if(item.schoolStatus==2){
+					var status = '<td>2-Merged</td></tr>'
+					var res =tabl.concat(status)
+					$('#SchTrackTable').append(res);
+					let timeLineStatus = '<p class="text-white">School status : 2-Merged</p></div></li>';
+					let timlineRes = timeLineLi.concat(timeLineStatus);
+					$('#timeLineUL').append(timlineRes);
+					
+					}
+			if(item.schoolStatus==3){
+				   var status = '<td>3-Sanctioned but not Operational</td></tr>'
+				   var res =tabl.concat(status)
+				   $('#SchTrackTable').append(res);
+				  let timeLineStatus = '<p class="text-white">School status : 3-Sanctioned but not Operational</p></div></li>';
+				  let timlineRes = timeLineLi.concat(timeLineStatus);
+				  $('#timeLineUL').append(timlineRes);
+				  
+						}
+			if(item.schoolStatus==4){
+					var status = '<td>4-DCF not Recieved</td></tr>'
+					var res =tabl.concat(status)
+					$('#SchTrackTable').append(res);
+					let timeLineStatus = '<p class="text-white">School status : 4-DCF not Recieved</p></div></li>';
+					let timlineRes = timeLineLi.concat(timeLineStatus);
+					$('#timeLineUL').append(timlineRes);
+					
+						}
+			if(item.schoolStatus==5){
+				  var status = '<td class ="bg-danger text-light">5-Permanently Closed</td></tr>'
+				  var res =tabl.concat(status)
+				  $('#SchTrackTable').append(res);
+				  let timeLineStatus = '<p class="text-white bg-danger text-light"> School status : 5-Permanently Closed</p></div></li>';
+				  let timlineRes = timeLineLi.concat(timeLineStatus);
+				  $('#timeLineUL').append(timlineRes);
+											
+						}
+			if(item.schoolStatus==6){
+				  var status = '<td>WRONG CODE</td></tr>'
+				  var res =tabl.concat(status)
+				  $('#SchTrackTable').append(res);
+				  let timeLineStatus = '<p class="text-white">School status : WRONG CODE</p></div></li>';
+				  let timlineRes = timeLineLi.concat(timeLineStatus);
+				  $('#timeLineUL').append(timlineRes);
+						}
+							i++;
+				}
+		    if(item.yearId == 5){
+				var tabl = '<tr><td>'+i+'</td><td>2018-19</td><td>'+validateMessage(item.udiseSchCode)+'</td><td>'+validateMessage(item.schoolName)+'</td><td><b>State </b> : '+validateMessage(item.stateName)+'<br> <b>District </b> : '+validateMessage(item.districtName)+'<br><b>Block </b> : '+validateMessage(item.blockName)+'</td><td><b>State Mgmt </b> : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'<br><b>School Category </b> : '+item.schCategoryId+'-'+item.schCatDesc+'<br><b>School Type </b> : '+item.schType+'-'+item.schTypeDesc+'</td>'
+				var timeLineLi = '<li class="animate__animated animate__fadeInLeft animate__delay-0.5s in-view"><div class="text-white"><time>Academic Year 2018-19</time><p class="text-white">UDISE Code : '+validateMessage(item.udiseSchCode)+'</p><p class="text-white"> School : '+validateMessage(item.schoolName)+'</p><p class="text-white">State : '+validateMessage(item.stateName)+'  , District : '+validateMessage(item.districtName)+' ,Block : '+validateMessage(item.blockName)+'</p><p class="text-white">School Management : '+item.schMgmtId+'-'+item.schMgmtcStatedesc+'</p><p class="text-white">School Category : ' +item.schCategoryId+'-'+item.schCatDesc+'</p><p class="text-white">School Type : '+item.schType+'-'+item.schTypeDesc+'</p>'
+			if(item.schoolStatus==0){
+			    var status = '<td class = "bg-success text-light">0-Operational</td></tr>'
+				var res =tabl.concat(status)
+			    $('#SchTrackTable').append(res);
+				var TimeLinestatus = '<p class="text-white bg-success text-light">School status : 0-Operational</p></div></li>'
+				var TimeLineres =timeLineLi.concat(TimeLinestatus)
+				$('#timeLineUL').append(TimeLineres);
+					}
+		  if(item.schoolStatus==1){
+				var status = '<td class ="bg-warning">1-Closed</td></tr>'
+				var res =tabl.concat(status)
+				$('#SchTrackTable').append(res);
+				var TimeLinestatus = '<p class="text-white bg-warning" >School status : 1-Closed</p></div></li>'
+				var TimeLineres =timeLineLi.concat(TimeLinestatus)
+			    $('#timeLineUL').append(TimeLineres);
+							}
+		if(item.schoolStatus==2){
+				var status = '<td>2-Merged</td></tr>'
+				var res =tabl.concat(status)
+				$('#SchTrackTable').append(res);
+				var TimeLinestatus = '<p class="text-white">School status : 2-Merged</p></div></li>'
+				var TimeLineres =timeLineLi.concat(TimeLinestatus)
+				$('#timeLineUL').append(TimeLineres);
+							}
+		if(item.schoolStatus==3){
+				var status = '<td>3-Sanctioned but not Operational</td></tr>'
+				var res =tabl.concat(status)
+			    $('#SchTrackTable').append(res);
+				var TimeLinestatus = '<p class="text-white">School status : 3-Sanctioned but not Operational</p></div></li>'
+				var TimeLineres =timeLineLi.concat(TimeLinestatus)
+				$('#timeLineUL').append(TimeLineres);
+						}
+		 if(item.schoolStatus==4){
+				var status = '<td>4-DCF not Recieved</td></tr>'
+				var res =tabl.concat(status)
+				$('#SchTrackTable').append(res);
+				var TimeLinestatus = '<p class="text-white">School status : 4-DCF not Recieved</p></div></li>'
+				var TimeLineres =timeLineLi.concat(TimeLinestatus)
+				$('#timeLineUL').append(TimeLineres);
+						}
+		if(item.schoolStatus==5){
+			   var status = '<td class ="bg-danger text-light">5-Permanently Closed</td></tr>'
+			   var res =tabl.concat(status)
+			   $('#SchTrackTable').append(res);
+			   var TimeLinestatus = '<p class="text-white bg-danger text-light">School status : 5-Permanently Closed</p></div></li>'
+			   var TimeLineres =timeLineLi.concat(TimeLinestatus)
+			   $('#timeLineUL').append(TimeLineres);
+					}
+		if(item.schoolStatus==6){
+			  var status = '<td>WRONG CODE</td></tr>'
+			  var res =tabl.concat(status)
+			  $('#SchTrackTable').append(res);
+			  var TimeLinestatus = '<p class="text-white">School status : WRONG CODE</p></div></li>'
+			  var TimeLineres =timeLineLi.concat(TimeLinestatus)
+			  $('#timeLineUL').append(TimeLineres);
+					}
+					i++;
+			}
+										 
+		});
+	}
+});
+document.getElementById("schoolTrackId").click();
+
+}
+function validateMessage(msg) {
+	 if (msg.includes("alert(")) {
+			return "There are some problem.";
+		}else  if (msg.includes("/script")) {
+			return "There are some problem.";
+			}
+		return msg;
+	}
+			</script>
+
+
+		</div>
+		
+		
+	
+	
+
+
+
+<meta http-equiv="X-Frame-Options" content="DENY">
+<style>
+.span {
+	flex: 1;
+}
+</style>
+
+<footer class="alifooter">
+	<div style="background-color: #198dcb; padding: 7px 0px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+				 <img src="/resources/images/nic.png" alt="" class="img-responsive my-2">
+				</div>
+                <div class="col-md-3">
+                </div>
+				<div class="col-md-6 text-right">
+					<p class="fpara text-white mt-2"></p><p class="fpara text-white mt-2">This site is designed, hosted,
+						developed and maintained by National Informatics Centre (NIC)<br>v1.11.11.2022</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="/resources/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/resources/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="/resources/js/bootstrap-4.3.1.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/resources/js/src_js/global_search.js"></script>
+<script type="text/javascript" src="/resources/js/custom.js"></script>
+<script type="text/javascript" src="/resources/js/select2.min.js"></script>
+<script type="text/javascript" src="/resources/js/toastr.js"></script>
+	<script type="text/javascript" src="/resources/js/toastr.min.js"></script>
+
+
+<script>
+	$(document).ready(function() {
+		$('#example').DataTable();
+	});
+</script>
+	
+
+
+
+
+</div></body></html>
